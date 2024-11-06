@@ -1,22 +1,29 @@
-/* {
+* {
     margin: 0;
     padding: 0;
-    border-style: border-box;
+    box-sizing: border-box;
 }
-*/
+
+:root {
+    --background-color: darkblue;
+    --text-color: white;
+    --border-color-black: black;
+    --text-color-white: darkblue;
+}
+
 nav {
-    background-color: darkblue;
+    background-color: var(--background-color);
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: var(--text-color);
     display: block;
     padding: 20px;
 }
 
 h1 {
-    color: darkblue;
+    color: var(--text-color-white);
 }
 
 main img {
@@ -40,8 +47,8 @@ aside {
     margin: 1 rem;
     border: 1px solid black;
     padding: 1rem;
-    background-color: darkblue;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     text-align: center;
 }
 
@@ -52,7 +59,15 @@ aside img {
 
 footer {
     margin-top: 20px;
-    border-top: 1px solid darkblue;
+    border-top: 1px solid -var(--background-color);
     text-align: center;
     max-width: 100%;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    color: white;
 }
